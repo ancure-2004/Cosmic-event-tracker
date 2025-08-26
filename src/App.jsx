@@ -16,7 +16,7 @@ const App = () => {
     <Router>
       <AuthProvider>
         <NEOProvider>
-          <div className="min-h-screen bg-cosmic-black flex flex-col">
+          <div className="min-h-screen bg-gradient-to-b from-cosmic-black via-slate-900 to-cosmic-black flex flex-col">
 
             {/* Main Layout */}
             <Header />

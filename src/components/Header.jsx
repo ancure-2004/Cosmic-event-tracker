@@ -151,18 +151,12 @@ const Header = () => {
                     </button>
                   </div>
                 ) : (
-                  <div className="space-y-2">
+                  <div className="space-y-2 flex">
                     <button
                       onClick={() => handleAuthClick('signin')}
-                      className="w-full btn-secondary"
+                      className="w-full font-bold text-white bg-cosmic-purple rounded-2xl p-2 btn-secondary"
                     >
                       Sign In
-                    </button>
-                    <button
-                      onClick={() => handleAuthClick('signup')}
-                      className="w-full btn-primary"
-                    >
-                      Sign Up
                     </button>
                   </div>
                 )}

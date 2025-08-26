@@ -11,6 +11,11 @@ import {
 	RefreshCw,
 	AlertCircle,
 	Telescope,
+	Sparkles,
+	Zap,
+	Globe,
+	ArrowRight,
+	Star,
 } from "lucide-react";
 
 const HomePage = () => {
@@ -117,59 +122,173 @@ const HomePage = () => {
 
 	if (!user) {
 		return (
-			<div className="container mx-auto px-4 py-12">
-				<div className="text-center max-w-2xl mx-auto">
-					<div className="mb-8">
-						<div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cosmic-blue to-cosmic-purple rounded-full mb-6">
-							<Telescope className="h-10 w-10 text-white" />
+			<div className="min-h-screen bg-gradient-to-b from-cosmic-black via-indigo-950/30 to-cosmic-black relative overflow-hidden">
+				{/* Animated Background Elements */}
+				<div className="absolute inset-0 overflow-hidden pointer-events-none">
+					<div className="absolute top-20 left-10 w-2 h-2 bg-yellow-300 rounded-full animate-pulse opacity-60"></div>
+					<div className="absolute top-40 right-20 w-1 h-1 bg-blue-300 rounded-full animate-ping opacity-40"></div>
+					<div className="absolute bottom-60 left-1/4 w-1.5 h-1.5 bg-purple-300 rounded-full animate-pulse opacity-50"></div>
+					<div className="absolute top-1/3 right-1/3 w-1 h-1 bg-cyan-300 rounded-full animate-ping opacity-30"></div>
+					<div className="absolute bottom-40 right-16 w-2 h-2 bg-pink-300 rounded-full animate-pulse opacity-40"></div>
+
+					{/* Gradient Orbs */}
+					<div className="absolute top-1/4 -left-20 w-80 h-80 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+					<div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse"></div>
+				</div>
+
+				<div className="container mx-auto px-4 py-16 relative z-10">
+					<div className="text-center max-w-4xl mx-auto">
+						{/* Enhanced Header Section */}
+						<div className="mb-16">
+							<div className="relative inline-block mb-8">
+								<div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-full blur-2xl animate-pulse"></div>
+								<div className="relative inline-flex items-center justify-center w-28 h-28 bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 rounded-full shadow-2xl shadow-purple-500/50 animate-pulse">
+									<Telescope className="h-14 w-14 text-white animate-bounce" />
+								</div>
+							</div>
+
+							<div className="space-y-6">
+								<h1 className="text-6xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 tracking-tight leading-tight">
+									Cosmic Event Tracker
+								</h1>
+								<div className="flex items-center justify-center gap-2 text-yellow-300 mb-4">
+									<Sparkles className="h-5 w-5 animate-pulse" />
+									<span className="text-sm font-semibold uppercase tracking-wider">
+										Live NASA Data
+									</span>
+									<Sparkles className="h-5 w-5 animate-pulse" />
+								</div>
+								<p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
+									Monitor Near-Earth Objects and explore the cosmos with{" "}
+									<span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-400 font-bold">
+										cutting-edge space technology
+									</span>
+								</p>
+							</div>
 						</div>
-						<h1 className="text-4xl font-bold text-white mb-4">
-							Welcome to Cosmic Event Tracker
-						</h1>
-						<p className="text-xl text-gray-300 mb-8">
-							Track Near-Earth Objects and monitor cosmic events with real-time
-							NASA data
-						</p>
+
+						{/* Enhanced Features Grid */}
+						<div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+							{/* Real-time Data Card */}
+							<div className="group relative">
+								<div className="absolute -inset-1 bg-gradient-to-r from-blue-500/50 to-cyan-500/50 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+								<div className="relative p-8 rounded-2xl bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 hover:border-blue-400/50 transform hover:scale-105 hover:-translate-y-2 transition-all duration-500 shadow-2xl">
+									<div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-2xl mx-auto mb-6 shadow-lg shadow-blue-500/30">
+										<Calendar className="h-8 w-8 text-white" />
+									</div>
+									<h3 className="text-xl font-bold text-white mb-4">
+										Real-time Data
+									</h3>
+									<p className="text-gray-300 leading-relaxed">
+										Access live Near-Earth Object data directly from NASA’s
+										database with instant updates.{" "}
+									</p>
+									<div className="mt-6 flex items-center justify-center text-blue-400 group-hover:text-blue-300">
+										<Zap className="h-4 w-4 mr-2 animate-pulse" />
+										<span className="text-sm font-semibold">Live Updates</span>
+									</div>
+								</div>
+							</div>
+
+							{/* Compare & Analyze Card */}
+							<div className="group relative">
+								<div className="absolute -inset-1 bg-gradient-to-r from-purple-500/50 to-pink-500/50 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+								<div className="relative p-8 rounded-2xl bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 hover:border-purple-400/50 transform hover:scale-105 hover:-translate-y-2 transition-all duration-500 shadow-2xl">
+									<div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-400 rounded-2xl mx-auto mb-6 shadow-lg shadow-purple-500/30">
+										<BarChart3 className="h-8 w-8 text-white" />
+									</div>
+									<h3 className="text-xl font-bold text-white mb-4">
+										Compare & Analyze
+									</h3>
+									<p className="text-gray-300 leading-relaxed">
+										Select multiple NEOs to analyze their characteristics,
+										trajectories, and orbital patterns side by side.
+									</p>
+									<div className="mt-6 flex items-center justify-center text-purple-400 group-hover:text-purple-300">
+										<Globe className="h-4 w-4 mr-2 animate-spin" />
+										<span className="text-sm font-semibold">
+											Advanced Analytics
+										</span>
+									</div>
+								</div>
+							</div>
+
+							{/* Risk Assessment Card */}
+							<div className="group relative">
+								<div className="absolute -inset-1 bg-gradient-to-r from-orange-500/50 to-red-500/50 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+								<div className="relative p-8 rounded-2xl bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 hover:border-orange-400/50 transform hover:scale-105 hover:-translate-y-2 transition-all duration-500 shadow-2xl">
+									<div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-orange-400 to-red-400 rounded-2xl mx-auto mb-6 shadow-lg shadow-orange-500/30">
+										<AlertCircle className="h-8 w-8 text-white" />
+									</div>
+									<h3 className="text-xl font-bold text-white mb-4">
+										Risk Assessment
+									</h3>
+									<p className="text-gray-300 leading-relaxed">
+										Identify potentially hazardous asteroids and monitor their
+										approach trajectories with precision alerts.
+									</p>
+									<div className="mt-6 flex items-center justify-center text-orange-400 group-hover:text-orange-300">
+										<AlertCircle className="h-4 w-4 mr-2 animate-pulse" />
+										<span className="text-sm font-semibold">Smart Alerts</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						{/* Stats Section */}
+						<div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+							<div className="text-center p-6 rounded-xl bg-slate-900/50 border border-slate-700/30 backdrop-blur-sm">
+								<div className="text-3xl font-bold text-blue-400 mb-1">
+									30,000+
+								</div>
+								<div className="text-sm text-gray-400">NEOs Tracked</div>
+							</div>
+							<div className="text-center p-6 rounded-xl bg-slate-900/50 border border-slate-700/30 backdrop-blur-sm">
+								<div className="text-3xl font-bold text-purple-400 mb-1">
+									24/7
+								</div>
+								<div className="text-sm text-gray-400">Monitoring</div>
+							</div>
+							<div className="text-center p-6 rounded-xl bg-slate-900/50 border border-slate-700/30 backdrop-blur-sm">
+								<div className="text-3xl font-bold text-yellow-400 mb-1">
+									2,000+
+								</div>
+								<div className="text-sm text-gray-400">PHAs Identified</div>
+							</div>
+							<div className="text-center p-6 rounded-xl bg-slate-900/50 border border-slate-700/30 backdrop-blur-sm">
+								<div className="text-3xl font-bold text-green-400 mb-1">
+									99.9%
+								</div>
+								<div className="text-sm text-gray-400">Accuracy</div>
+							</div>
+						</div>
+
+						{/* Enhanced CTA Section */}
+						<div className="relative">
+							<div className="absolute -inset-8 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-3xl blur-2xl"></div>
+							<div className="relative bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl rounded-3xl border border-slate-700/50 p-12">
+								<div className="flex items-center justify-center mb-6">
+									<Star className="h-6 w-6 text-yellow-300 animate-pulse mr-2" />
+									<h2 className="text-2xl font-bold text-white">
+										Ready to Explore the Cosmos?
+									</h2>
+									<Star className="h-6 w-6 text-yellow-300 animate-pulse ml-2" />
+								</div>
+								<p className="text-xl text-gray-300 mb-8">
+									Join thousands of space enthusiasts tracking cosmic events in
+									real-time
+								</p>
+							</div>
+						</div>
+
+						{/* Footer Note */}
+						<div className="mt-16 text-center">
+							<p className="text-gray-500 text-sm flex items-center justify-center gap-2">
+								<span>Powered by NASA's Near Earth Object Web Service</span>
+								<div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+							</p>
+						</div>
 					</div>
-
-					<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-						<div className="card p-6 text-center">
-							<Calendar className="h-8 w-8 text-cosmic-gold mx-auto mb-3" />
-							<h3 className="text-lg font-semibold text-white mb-2">
-								Real-time Data
-							</h3>
-							<p className="text-gray-300 text-sm">
-								Access up-to-date information about Near-Earth Objects from
-								NASA's database
-							</p>
-						</div>
-
-						<div className="card p-6 text-center">
-							<BarChart3 className="h-8 w-8 text-cosmic-gold mx-auto mb-3" />
-							<h3 className="text-lg font-semibold text-white mb-2">
-								Compare & Analyze
-							</h3>
-							<p className="text-gray-300 text-sm">
-								Select multiple NEOs to compare their characteristics and
-								trajectories
-							</p>
-						</div>
-
-						<div className="card p-6 text-center">
-							<AlertCircle className="h-8 w-8 text-cosmic-gold mx-auto mb-3" />
-							<h3 className="text-lg font-semibold text-white mb-2">
-								Risk Assessment
-							</h3>
-							<p className="text-gray-300 text-sm">
-								Identify potentially hazardous asteroids and monitor their
-								approach
-							</p>
-						</div>
-					</div>
-
-					<p className="text-gray-400 text-lg">
-						Please sign in to start exploring cosmic events
-					</p>
 				</div>
 			</div>
 		);
@@ -177,7 +296,6 @@ const HomePage = () => {
 
 	return (
 		<div className="container mx-auto px-4 py-8">
-			{/* Header */}
 			<div className="mb-8">
 				<div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
 					<div>
@@ -195,7 +313,7 @@ const HomePage = () => {
 						<button
 							onClick={handleCompare}
 							disabled={selectedNEOs.length < 2}
-							className={`btn-primary text-cosmic-gold hover:dark:bg-slate-800/[0.8] rounded-2xl p-2 ${
+							className={`btn-primary flex text-cosmic-gold hover:dark:bg-slate-800/[0.8] rounded-2xl p-2 ${
 								selectedNEOs.length < 2 ? "opacity-50 cursor-not-allowed" : ""
 							}`}
 						>
@@ -341,7 +459,9 @@ const HomePage = () => {
 										<p className="underline">Loading more...</p>
 									</>
 								) : (
-									<p className="text-sm font-semibold underline">Load More Days</p>
+									<p className="text-sm font-semibold underline">
+										Load More Days
+									</p>
 								)}
 							</button>
 						</div>

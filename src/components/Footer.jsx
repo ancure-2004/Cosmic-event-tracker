@@ -40,6 +40,7 @@ const Footer = () => {
                 </li>
               </a>
             </ul>
+            <h2 className='text-cosmic-gold mt-3 text-lg'>Developed by @Ankur Tyagi</h2>
           </div>
         </div>
 

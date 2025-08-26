@@ -58,7 +58,7 @@ const Filter = ({ onFiltersChange, currentFilters = {} }) => {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={`btn-secondary flex items-center space-x-2 relative text-cosmic-gold ${
-          hasActiveFilters() ? 'ring-2 ring-white' : ''
+          hasActiveFilters() ? '' : ''
         }`}
       >
         <FilterIcon className="h-4 w-4" />
@@ -155,7 +155,7 @@ const Filter = ({ onFiltersChange, currentFilters = {} }) => {
                   <div className="pt-2 border-t border-white/10">
                     <button
                       onClick={clearFilters}
-                      className="w-full btn-secondary text-sm"
+                      className="w-full btn-secondary text-sm text-white"
                     >
                       Clear All Filters
                     </button>

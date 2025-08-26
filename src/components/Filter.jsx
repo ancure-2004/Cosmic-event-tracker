@@ -57,12 +57,12 @@ const Filter = ({ onFiltersChange, currentFilters = {} }) => {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`btn-secondary flex items-center space-x-2 relative ${
-          hasActiveFilters() ? 'ring-2 ring-cosmic-purple' : ''
+        className={`btn-secondary flex items-center space-x-2 relative text-cosmic-gold ${
+          hasActiveFilters() ? 'ring-2 ring-white' : ''
         }`}
       >
         <FilterIcon className="h-4 w-4" />
-        <span>Filters</span>
+        <span className='text-cosmic-gold'>Filters</span>
         {hasActiveFilters() && (
           <span className="absolute -top-2 -right-2 bg-cosmic-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
             {getActiveFilterCount()}
@@ -113,7 +113,7 @@ const Filter = ({ onFiltersChange, currentFilters = {} }) => {
                   <select
                     value={localFilters.sortBy}
                     onChange={(e) => handleFilterChange('sortBy', e.target.value)}
-                    className="w-full input"
+                    className="w-full p-3 rounded-lg border-2 border-gray-200/50 dark:border-gray-700/50 bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm focus:border-blue-500 dark:focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 text-sm group-hover:shadow-lg"
                   >
                     {sortOptions.map((option) => (
                       <option key={option.value} value={option.value} className="bg-gray-800">
@@ -135,7 +135,7 @@ const Filter = ({ onFiltersChange, currentFilters = {} }) => {
                         type="date"
                         value={localFilters.startDate}
                         onChange={(e) => handleFilterChange('startDate', e.target.value)}
-                        className="input text-sm"
+										    className="w-full p-3 rounded-lg border-2 border-gray-200/50 dark:border-gray-700/50 bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm focus:border-blue-500 dark:focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 text-sm group-hover:shadow-lg"
                       />
                     </div>
                     <div>
@@ -144,7 +144,7 @@ const Filter = ({ onFiltersChange, currentFilters = {} }) => {
                         type="date"
                         value={localFilters.endDate}
                         onChange={(e) => handleFilterChange('endDate', e.target.value)}
-                        className="input text-sm"
+                        className="w-full p-3 rounded-lg border-2 border-gray-200/50 dark:border-gray-700/50 bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm focus:border-blue-500 dark:focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 text-sm group-hover:shadow-lg"
                       />
                     </div>
                   </div>

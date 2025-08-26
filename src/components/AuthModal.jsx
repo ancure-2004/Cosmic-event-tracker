@@ -138,7 +138,7 @@ const AuthModal = ({ isOpen, onClose, mode, onModeChange }) => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className={`input pl-10 w-full ${errors.email ? 'border-red-500 focus:ring-red-500' : ''}`}
+                    className={`input w-full p-3 rounded-lg border-2 border-gray-200/50 dark:border-gray-700/50 bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm focus:border-blue-500 dark:focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 text-sm group-hover:shadow-lg ${errors.email ? 'border-red-500 focus:ring-red-500' : ''}`}
                     placeholder="Enter your email"
                   />
                 </div>
@@ -159,7 +159,7 @@ const AuthModal = ({ isOpen, onClose, mode, onModeChange }) => {
                     name="password"
                     value={formData.password}
                     onChange={handleChange}
-                    className={`input pl-10 w-full ${errors.password ? 'border-red-500 focus:ring-red-500' : ''}`}
+                    className={`input w-full p-3 rounded-lg border-2 border-gray-200/50 dark:border-gray-700/50 bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm focus:border-blue-500 dark:focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 text-sm group-hover:shadow-lg ${errors.password ? 'border-red-500 focus:ring-red-500' : ''}`}
                     placeholder="Enter your password"
                   />
                 </div>
@@ -181,7 +181,7 @@ const AuthModal = ({ isOpen, onClose, mode, onModeChange }) => {
                       name="confirmPassword"
                       value={formData.confirmPassword}
                       onChange={handleChange}
-                      className={`input pl-10 w-full ${errors.confirmPassword ? 'border-red-500 focus:ring-red-500' : ''}`}
+                      className={`input w-full p-3 rounded-lg border-2 border-gray-200/50 dark:border-gray-700/50 bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm focus:border-blue-500 dark:focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 text-sm group-hover:shadow-lg ${errors.confirmPassword ? 'border-red-500 focus:ring-red-500' : ''}`}
                       placeholder="Confirm your password"
                     />
                   </div>
@@ -194,11 +194,11 @@ const AuthModal = ({ isOpen, onClose, mode, onModeChange }) => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full rounded-xl p-3 btn-primary bg-cosmic-purple disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {loading ? (
                   <span className="flex items-center justify-center space-x-2">
-                    <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
                     <span>{mode === 'signin' ? 'Signing In...' : 'Creating Account...'}</span>
                   </span>
                 ) : (
@@ -219,14 +219,6 @@ const AuthModal = ({ isOpen, onClose, mode, onModeChange }) => {
                 {mode === 'signin' ? 'Sign Up' : 'Sign In'}
               </button>
             </div>
-
-            {mode === 'signin' && (
-              <div className="mt-4 text-center">
-                <p className="text-xs text-gray-500">
-                  Demo: Use any email/password combination to sign in
-                </p>
-              </div>
-            )}
           </form>
         </div>
       </div>

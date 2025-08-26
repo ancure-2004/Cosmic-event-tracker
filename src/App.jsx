@@ -16,12 +16,7 @@ const App = () => {
     <Router>
       <AuthProvider>
         <NEOProvider>
-          <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex flex-col">
-            {/* Background Pattern */}
-            <div className="fixed inset-0 opacity-20 pointer-events-none">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent)]"></div>
-              <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_48%,rgba(255,255,255,0.05)_49%,rgba(255,255,255,0.05)_51%,transparent_52%)] bg-[length:20px_20px]"></div>
-            </div>
+          <div className="min-h-screen bg-cosmic-black flex flex-col">
 
             {/* Main Layout */}
             <Header />

@@ -12,6 +12,7 @@ export default {
           blue: '#1e3a8a',
           purple: '#7c3aed',
           gold: '#fbbf24',
+          black: '#000319'
         }
       },
       animation: {

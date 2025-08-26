@@ -1,12 +1,11 @@
 import React from 'react'
-import { Telescope, Github, ExternalLink } from 'lucide-react'
+import { Telescope, Github, ExternalLink, LinkedinIcon } from 'lucide-react'
 
 const Footer = () => {
   return (
     <footer className="bg-gray-900/80 backdrop-blur-sm border-t border-white/10 mt-auto">
-      <div className="container mx-auto px-4 py-8">
+      <div className="mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Brand Section */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="p-2 bg-gradient-to-r from-cosmic-blue to-cosmic-purple rounded-lg">
@@ -20,41 +19,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Quick Links */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white">Resources</h3>
-            <div className="space-y-2">
-              <a 
-                href="https://api.nasa.gov/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 text-gray-400 hover:text-cosmic-gold transition-colors text-sm"
-              >
-                <ExternalLink className="h-4 w-4" />
-                <span>NASA Open Data API</span>
-              </a>
-              <a 
-                href="https://cneos.jpl.nasa.gov/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 text-gray-400 hover:text-cosmic-gold transition-colors text-sm"
-              >
-                <ExternalLink className="h-4 w-4" />
-                <span>JPL CNEOS</span>
-              </a>
-              <a 
-                href="https://www.nasa.gov/planetarydefense/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 text-gray-400 hover:text-cosmic-gold transition-colors text-sm"
-              >
-                <ExternalLink className="h-4 w-4" />
-                <span>Planetary Defense</span>
-              </a>
-            </div>
-          </div>
-
-          {/* Developer Info */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white">About</h3>
             <div className="space-y-2">
@@ -63,9 +27,32 @@ const Footer = () => {
               </p>
               <div className="flex items-center space-x-2 text-cosmic-gold">
                 <Github className="h-4 w-4" />
-                <span className="text-sm font-medium">Developed by @YourName</span>
+                <span className="text-lg font-medium">Developed by @Ankur Tyagi</span>
               </div>
             </div>
+          </div>
+
+          <div>
+            <ul>
+              <a href='https://www.linkedin.com/in/ankur-tyagi-/' target="_blank" rel="noopener noreferrer">
+                <li>
+                  <LinkedinIcon className="inline h-5 w-5 text-cosmic-blue mr-2" />
+                  <span className="text-gray-400 hover:text-white text-sm">Connect on LinkedIn</span>
+                </li>
+              </a>
+              <a href='https://github.com/ancure-2004' target="_blank" rel="noopener noreferrer">
+                <li>
+                  <Github className="inline h-5 w-5 text-cosmic-blue mr-2" />
+                  <span className="text-gray-400 hover:text-white text-sm">Connect on GitHub</span>
+                </li>
+              </a>
+              <a href='https://ankurtyagi.vercel.app/' target="_blank" rel="noopener noreferrer">
+                <li>
+                  <ExternalLink className="inline h-5 w-5 text-cosmic-blue mr-2" />
+                  <span className="text-gray-400 hover:text-white text-sm">My Portfolio</span>
+                </li>
+              </a>
+            </ul>
           </div>
         </div>
 

@@ -26,7 +26,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="bg-black/20 backdrop-blur-lg border-b border-white/10 sticky top-0 z-40">
+      <header className="bg-black/20 backdrop-blur-lg border-b border-white/10 sticky top-0 z-40 py-5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo and Brand */}
@@ -74,23 +74,23 @@ const Header = () => {
                   </div>
                   <button
                     onClick={handleSignOut}
-                    className="flex items-center space-x-2 btn-secondary"
+                    className="flex items-center space-x-2 btn-secondary text-cosmic-gold hover:dark:bg-slate-800/[0.8] rounded-2xl p-3"
                   >
                     <LogOut className="h-4 w-4" />
-                    <span>Sign Out</span>
+                    <span className='text-cosmic-gold'>Sign Out</span>
                   </button>
                 </div>
               ) : (
                 <div className="flex items-center space-x-3">
                   <button
                     onClick={() => handleAuthClick('signin')}
-                    className="btn-secondary"
+                    className="btn-secondary text-cosmic-gold hover:dark:bg-slate-800/[0.8] rounded-2xl p-3"
                   >
                     Sign In
                   </button>
                   <button
                     onClick={() => handleAuthClick('signup')}
-                    className="btn-primary"
+                    className="btn-primary  text-cosmic-gold hover:dark:bg-slate-800/[0.8] rounded-2xl p-3"
                   >
                     Sign Up
                   </button>
@@ -147,7 +147,7 @@ const Header = () => {
                       className="w-full flex items-center justify-center space-x-2 btn-secondary"
                     >
                       <LogOut className="h-4 w-4" />
-                      <span>Sign Out</span>
+                      <span className='text-cosmic-gold'>Sign Out</span>
                     </button>
                   </div>
                 ) : (

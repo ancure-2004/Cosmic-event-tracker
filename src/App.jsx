@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { AuthProvider } from './contexts/AuthContext'
-import { NEOProvider } from './contexts/NEOContext'
+import { NEOProvider } from './contexts/NeoContext'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import AuthModal from './components/AuthModal'

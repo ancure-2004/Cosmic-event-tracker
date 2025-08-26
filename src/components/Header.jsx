@@ -146,7 +146,7 @@ const Header = () => {
                       onClick={handleSignOut}
                       className="w-full flex items-center justify-center space-x-2 btn-secondary"
                     >
-                      <LogOut className="h-4 w-4" />
+                      <LogOut className="text-cosmic-gold h-4 w-4" />
                       <span className='text-cosmic-gold'>Sign Out</span>
                     </button>
                   </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { AlertTriangle, Shield, Calendar, Ruler, Zap, Target, ExternalLink } from 'lucide-react'
-import { useNEO } from '../contexts/NEOContext'
+import { useNEO } from '../contexts/NeoContext'
 import { formatDistance, formatVelocity, formatDiameter } from '../services/nasaAPI'
 
 const NEOCard = ({ neo, showCheckbox = false, onSelect, isSelected = false }) => {

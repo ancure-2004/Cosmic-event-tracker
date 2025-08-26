@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useNEO } from '../contexts/NEOContext'
+import { useNEO } from '../contexts/NeoContext'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, BarChart, Bar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar } from 'recharts'
 import { ArrowLeft, BarChart3, Zap, Target, Ruler, Calendar, AlertTriangle, TrendingUp } from 'lucide-react'
 

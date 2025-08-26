@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useNEO } from '../contexts/NEOContext'
+import { useNEO } from '../contexts/NeoContext'
 import { useAuth } from '../contexts/AuthContext'
 import NEOCard from '../components/NeoCard'
 import LoadingSpinner, { LoadingSkeleton } from '../components/LoadingSpinner'

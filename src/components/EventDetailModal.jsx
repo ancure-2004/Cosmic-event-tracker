@@ -1,6 +1,6 @@
 import React from 'react'
 import { X, AlertTriangle, Shield, Calendar, Ruler, Zap, Target, ExternalLink, Globe, Clock, Orbit } from 'lucide-react'
-import { useNEO } from '../contexts/NEOContext'
+import { useNEO } from '../contexts/NeoContext'
 import { formatDistance, formatVelocity, formatDiameter } from '../services/nasaAPI'
 
 const EventDetailModal = () => {

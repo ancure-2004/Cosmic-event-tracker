@@ -50,7 +50,7 @@ const NEOCard = ({neo, showCheckbox = false, onSelect, isSelected = false}) => {
 
 	return (
 		<div
-			className={`card cursor-pointer rounded-xl backdrop-blur-lg dark:bg-slate-800/[0.8] transition-all duration-300 hover:scale-[1.02] ${
+			className={`card cursor-pointer rounded-xl backdrop-blur-lg bg-slate-800/[0.8] transition-all duration-300 hover:scale-[1.02] ${
 				isSelected ? "ring-2 ring-cosmic-purple border-cosmic-purple" : ""
 			}`}
 			onClick={handleCardClick}
